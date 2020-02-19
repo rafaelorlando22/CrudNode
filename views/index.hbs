@@ -1,0 +1,25 @@
+<div class="container">      
+    <div class="row">
+    <br>
+    <a href="/producto/nuevo" class="btn btn-primary">Nuevo</a>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>precio</th>
+            <th colspan="2">Operación</th>
+        </tr>
+        </thead>
+        {{#each productos}}
+          <tr>
+            <td>{{this.nombre}}</td> 
+            <td>{{this.descripcion}}</td>
+            <td>{{this.precio}}</td>
+            <td><a href="/producto/modificar/{{this._id}}">Modificar</a></td> 
+            <td><a href="/producto/eliminar/{{this._id}}">Eliminar</a></td> 
+          </tr>          
+       {{/each}}   
+      </table>
+    </div>
+</div>
